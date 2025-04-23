@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package proto; // Or choose a different package name
+
+option go_package = "github.com/ghSurf/proto"; // Adjust path as needed
+
+service GithubSearchService {
+  rpc Search(SearchRequest) returns (SearchResponse);
+}
+
+message SearchRequest {
+  string search_term = 1;
+  string user = 2; // Optional user filter
+}
+
+message SearchResponse {
+  repeated Result results = 1;
+}
+
+message Result {
+  string file_url = 1; // URL to the file on GitHub
+  string repo = 2;     // Repository name (e.g., "owner/repo")
+}

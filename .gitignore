@@ -1,0 +1,13 @@
+# Environment variables
+.env*
+
+# Compiled binary
+ghsurf_server
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Go build cache/test files (optional)
+*.test
+*.prof
