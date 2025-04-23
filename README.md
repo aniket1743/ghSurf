@@ -33,7 +33,7 @@ The service requires configuration, primarily the GitHub token.
     *   Create a `.env` file at a specific location (e.g., `/Users/John/envFiles/.env` as currently hardcoded in `cmd/server/main.go` - **you should modify this path in `main.go` to your preferred location**).
     *   Add the variables to the file.
 
-### Future Improvements
+## Future Improvements
 
 1. API-Level Pagination: The most significant limitation. If the proto definition could be changed, adding `page`, `per_page` to `SearchRequest` and `total_count`, `current_page`, `total_pages` to `SearchResponse` would be the top priority to enable proper pagination.
 2. Caching: Implement caching (e.g., using Redis) to store results for common queries, reduce GitHub API calls, avoid rate limits, and improve response times.
